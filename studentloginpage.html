@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Login | Savor & Sage</title>
+  <title>Student Login | Savor &amp; Sage</title>
 
   <!-- Website tab logo -->
   <link rel="icon" type="image/png" href="Images/logos2.png">
@@ -12,446 +11,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #1C1116;
-      --surface: #2A1920;
-      --text: #FFF8F5;
-      --border: rgba(184, 115, 78, 0.3);
-    }
-
-    html[data-theme="light"] {
-      --bg: #FFF8F5;
-      --surface: #FFFFFF;
-      --text: #30212A;
-      --border: #E8D8D8;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 20px;
-      font-family: 'DM Sans', sans-serif;
-      background: #1C1116;
-      color: #FFF8F5;
-    }
-
-    .login-card {
-      position: relative;
-      width: 100%;
-      max-width: 430px;
-      padding: 38px;
-      border: 1px solid rgba(184,115,78,.3);
-      border-radius: 20px;
-      background: #2A1920;
-      box-shadow: 0 20px 60px #0005;
-      animation: loginAppear .6s ease;
-    }
-
-    .brand {
-      text-align: center;
-      margin-bottom: 28px;
-    }
-
-    /* Round logo image */
-    .brand-icon {
-      width: 78px;
-      height: 78px;
-      margin: 0 auto 14px;
-      display: block;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid #B8734E;
-      box-shadow: 0 5px 20px #0004;
-      transition: transform .3s ease, box-shadow .3s ease;
-    }
-
-    .brand-icon img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    .brand-icon:hover {
-      transform: scale(1.08);
-      box-shadow: 0 8px 24px #B8734E40;
-    }
-
-    .brand h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 27px;
-      color: #fff;
-    }
-
-    .brand h1 span {
-      color: #B8734E;
-    }
-
-    .brand p {
-      margin-top: 7px;
-      color: #D0BEC4;
-      font-size: 11px;
-      letter-spacing: 2px;
-    }
-
-    .eyebrow {
-      color: #B8734E;
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-align: center;
-    }
-
-    h2 {
-      margin-top: 9px;
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-    }
-
-    .subtitle {
-      margin: 8px 0 25px;
-      color: #D0BEC4;
-      text-align: center;
-      font-size: 13px;
-    }
-
-    label {
-      display: block;
-      margin: 15px 0 7px;
-      font-size: 12px;
-      color: #F3E6E8;
-    }
-
-    input {
-      width: 100%;
-      padding: 13px 14px;
-      border: 1px solid rgba(184,115,78,.3);
-      border-radius: 9px;
-      background: #1C1116;
-      color: #FFF8F5;
-      outline: none;
-      font: inherit;
-      transition: border-color .25s, box-shadow .25s;
-    }
-
-    input:focus {
-      border-color: #B8734E;
-      box-shadow: 0 0 0 3px #B8734E20;
-    }
-
-    .submit-btn {
-      width: 100%;
-      margin-top: 22px;
-      padding: 14px;
-      border: 0;
-      border-radius: 9px;
-      background: #B8734E;
-      color: white;
-      font-weight: 700;
-      cursor: pointer;
-      transition: .25s;
-    }
-
-    .submit-btn:hover {
-      background: #ca8b67;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px #B8734E30;
-    }
-
-    #loginMessage {
-      margin-top: 12px;
-      color: #F3B5B5;
-      font-size: 12px;
-      text-align: center;
-    }
-
-    .back-link {
-      display: block;
-      margin-top: 22px;
-      text-align: center;
-      color: #D0BEC4;
-      text-decoration: none;
-      font-size: 12px;
-      transition: color .25s;
-    }
-
-    .back-link:hover {
-      color: #B8734E;
-    }
-
-    @keyframes loginAppear {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .login-card {
-        padding: 28px 22px;
-      }
-
-      .brand h1 {
-        font-size: 24px;
-      }
-    }
-    /* Top Utility Buttons */
-.page-utilities {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  gap: 10px;
-  z-index: 1000;
-}
-
-.utility-btn {
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(184, 115, 78, 0.3);
-  border-radius: 8px;
- 
-  color: #B8734E;
-  cursor: pointer;
-  font-size: 15px;
-  transition: background 0.2s, color 0.2s;
-}
-
-.utility-btn:hover {
-  background: #5E2335;
-  color: #FFF8F5;
-}
-
-/* Light Theme */
-body.light-theme {
-  background: #FFF8F5;
-  color: #30212A;
-}
-
-
-
-body.light-theme .brand h1 {
-  color: #30212A;
-}
-
-body.light-theme label {
-  color: #493641;
-}
-
-body.light-theme input {
-  background: #FFF8F5;
-  color: #30212A;
-  border-color: rgba(94, 35, 53, 0.25);
-}
-
-body.light-theme .subtitle,
-body.light-theme .back-link {
-  color: #6D5961;
-}
-
-/* RTL direction */
-html[dir="rtl"] .page-utilities {
-  right: auto;
-  left: 20px;
-}
-
-html[dir="rtl"] .login-card {
-  direction: rtl;
-  text-align: right;
-}
-
-html[dir="rtl"] .brand,
-html[dir="rtl"] .eyebrow,
-html[dir="rtl"] h2,
-html[dir="rtl"] .subtitle,
-html[dir="rtl"] .back-link,
-html[dir="rtl"] #loginMessage {
-  text-align: center;
-}
-
-@media (max-width: 480px) {
-  .page-utilities {
-    top: 12px;
-    right: 12px;
-    gap: 7px;
-  }
-
-  html[dir="rtl"] .page-utilities {
-    right: auto;
-    left: 12px;
-  }
-
-  .login-card {
-    margin-top: 35px;
-  }
-}
-a.brand {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-body.light-theme .login-card {
-  background: #FFFFFF;
-  border-color: rgba(74, 36, 15, 0.35);
-}
-
-/* Social Authentication Section */
-.social-auth-divider {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 22px 0 16px;
-  color: #D0BEC4;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-}
-
-.social-auth-divider::before,
-.social-auth-divider::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: rgba(184, 115, 78, 0.28);
-}
-
-.social-auth-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.social-auth-btn {
-  min-height: 48px;
-  padding: 0 14px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border: 1px solid rgba(184, 115, 78, 0.35);
-  border-radius: 10px;
-  background: #1C1116;
-  color: #FFF8F5;
-  font: inherit;
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.22s ease, border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
-}
-
-.social-auth-btn:hover {
-  background: rgba(94, 35, 53, 0.55);
-  border-color: #E3B89F;
-  color: #FFF8F5;
-  transform: translateY(-2px);
-}
-
-.social-auth-btn:focus-visible {
-  outline: 2px solid #B8734E;
-  outline-offset: 3px;
-}
-
-.social-auth-btn:active {
-  transform: translateY(0);
-}
-
-.social-auth-btn .social-icon {
-  width: 18px;
-  height: 18px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 17px;
-  line-height: 1;
-}
-
-.social-auth-status {
-  margin-top: 12px;
-  color: #E3B89F;
-  font-size: 12px;
-  line-height: 1.6;
-  text-align: center;
-  min-height: 0;
-}
-
-body.light-theme .social-auth-divider {
-  color: #6D5961;
-}
-
-body.light-theme .social-auth-divider::before,
-body.light-theme .social-auth-divider::after {
-  background: #E8D8D8;
-}
-
-body.light-theme .social-auth-btn {
-  background: #FFF8F5;
-  border-color: rgba(94, 35, 53, 0.25);
-  color: #30212A;
-}
-
-body.light-theme .social-auth-btn:hover {
-  background: #5E2335;
-  border-color: #5E2335;
-  color: #FFF8F5;
-}
-
-body.light-theme .social-auth-status {
-  color: #5E2335;
-}
-
-@media (max-width: 420px) {
-  .social-auth-grid {
-    grid-template-columns: 1fr;
-  }
-}
-  </style>
   <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="auth.css">
   <script src="theme-init.js"></script>
 </head>
 
 <body>
 
-  <main class="login-card">
-    <div class="page-utilities">
+  <!-- Top utility buttons -->
+  <div class="page-utilities">
+    <button class="utility-btn" id="themeToggle" type="button" title="Switch theme" aria-label="Switch theme">
+      <i class="fa-solid fa-sun"></i>
+    </button>
+    <button class="utility-btn" id="directionToggle" type="button" title="Switch text direction" aria-label="Switch LTR and RTL">
+      <i class="fa-solid fa-arrow-right-arrow-left"></i>
+    </button>
+  </div>
 
-  <!-- Dark / Light -->
-  <button class="utility-btn" id="themeToggle"
-          type="button" title="Switch theme"
-          aria-label="Switch theme">
-    <i class="fa-solid fa-sun"></i>
-  </button>
-
-  <!-- LTR / RTL -->
-  <button class="utility-btn" id="directionToggle"
-          type="button" title="Switch text direction"
-          aria-label="Switch LTR and RTL">
-    <i class="fa-solid fa-arrow-right-arrow-left"></i>
-  </button>
-
-    </div>
-
+  <main class="auth-card">
     <a href="index.html" class="brand" aria-label="Savor and Sage home">
       <div class="brand-icon">
-        <img src="Images/logos2.png" alt="Savor & Sage Cooking Studio Logo">
+        <img src="Images/logos2.png" alt="Savor &amp; Sage Cooking Studio Logo">
       </div>
-
       <h1>Savor <span>&amp;</span> Sage</h1>
       <p>COOKING STUDIO</p>
     </a>
@@ -459,37 +40,21 @@ body.light-theme .social-auth-status {
     <p class="eyebrow">STUDENT PORTAL</p>
     <h2>Welcome back!</h2>
     <p class="subtitle">Sign in to manage your cooking classes.</p>
-    
 
-    <form id="loginForm">
-      <label for="studentName">Student name</label>
-      <input
-        id="studentName"
-        type="text"
-        placeholder="Enter your name"
-        autocomplete="name"
-        required
-      >
-
+    <form id="loginForm" novalidate>
       <label for="studentEmail">Email address</label>
-      <input
-        id="studentEmail"
-        type="email"
-        placeholder="you@example.com"
-        autocomplete="email"
-        required
-      >
+      <div class="input-wrap">
+        <i class="fa-solid fa-envelope"></i>
+        <input id="studentEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+      </div>
 
       <label for="studentPassword">Password</label>
-      <input
-        id="studentPassword"
-        type="password"
-        placeholder="Enter password"
-        autocomplete="current-password"
-        required
-      >
+      <div class="input-wrap">
+        <i class="fa-solid fa-lock"></i>
+        <input id="studentPassword" type="password" placeholder="Enter password" autocomplete="current-password" required>
+      </div>
 
-      <p id="loginMessage" role="status"></p>
+      <p id="loginMessage" class="form-message" role="status" aria-live="polite"></p>
 
       <button class="submit-btn" type="submit">
         <i class="fa-solid fa-right-to-bracket"></i>
@@ -514,9 +79,7 @@ body.light-theme .social-auth-status {
         </button>
 
         <button type="button" class="social-auth-btn" data-social-provider="apple" aria-label="Continue with Apple">
-          <span class="social-icon" aria-hidden="true">
-            <i class="fa-brands fa-apple"></i>
-          </span>
+          <span class="social-icon" aria-hidden="true"><i class="fa-brands fa-apple"></i></span>
           <span>Apple</span>
         </button>
       </div>
@@ -524,131 +87,59 @@ body.light-theme .social-auth-status {
       <p class="social-auth-status" id="socialAuthStatus" role="status" aria-live="polite"></p>
     </div>
 
-
-
+    <p class="auth-switch">
+      New to Savor &amp; Sage?<a href="signuppage.html">Sign up</a>
+    </p>
   </main>
 
+  <script src="auth.js"></script>
   <script>
+    const loginMessage = document.getElementById("loginMessage");
+    const emailInput = document.getElementById("studentEmail");
+    const params = new URLSearchParams(window.location.search);
+
+    // Coming from the sign-up page
+    if (params.get("registered") === "1") {
+      if (params.get("email")) emailInput.value = params.get("email");
+      setFormMessage(loginMessage, "Account created! Please sign in.", "success");
+      document.getElementById("studentPassword").focus();
+    }
+
     document.getElementById("loginForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const name = document.getElementById("studentName").value.trim();
-      const email = document.getElementById("studentEmail").value.trim();
+      const email = emailInput.value.trim().toLowerCase();
       const password = document.getElementById("studentPassword").value;
-      const message = document.getElementById("loginMessage");
 
-      if (!name || !email || !password) {
-        message.textContent = "Please fill in all fields.";
+      if (!email || !password) {
+        setFormMessage(loginMessage, "Please enter your email and password.");
         return;
       }
 
-      // Demo login only; password is not verified by a server.
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setFormMessage(loginMessage, "Please enter a valid email address.");
+        return;
+      }
+
+      const account = findStudentAccount(email);
+
+      if (!account) {
+        setFormMessage(loginMessage, "No account found for this email. Please sign up first.");
+        return;
+      }
+
+      if (account.password !== password) {
+        setFormMessage(loginMessage, "Incorrect password. Please try again.");
+        return;
+      }
+
+      // Demo login only (browser storage, no server).
       localStorage.setItem("studentLoggedIn", "true");
-      localStorage.setItem("studentName", name);
-      localStorage.setItem("studentEmail", email);
+      localStorage.setItem("studentName", account.name);
+      localStorage.setItem("studentEmail", account.email);
 
       window.location.href = "dashboard.html";
     });
-
-    // Social login configuration check (does not fake authentication)
-    const SAVOR_SAGE_AUTH_CONFIG = window.SAVOR_SAGE_AUTH_CONFIG || {
-      googleAuthEndpoint: "",
-      googleClientId: "",
-      appleAuthEndpoint: "",
-      appleClientId: ""
-    };
-
-    const socialStatus = document.getElementById("socialAuthStatus");
-    document.querySelectorAll(".social-auth-btn").forEach((button) => {
-      button.addEventListener("click", () => {
-        const provider = button.dataset.socialProvider;
-
-        if (
-          provider === "google" &&
-          SAVOR_SAGE_AUTH_CONFIG.googleAuthEndpoint &&
-          SAVOR_SAGE_AUTH_CONFIG.googleClientId
-        ) {
-          const params = new URLSearchParams({
-            client_id: SAVOR_SAGE_AUTH_CONFIG.googleClientId,
-            redirect_uri: window.location.origin + "/dashboard.html",
-            response_type: "code",
-            scope: "openid email profile"
-          });
-          window.location.href = `${SAVOR_SAGE_AUTH_CONFIG.googleAuthEndpoint}?${params.toString()}`;
-          return;
-        }
-
-        if (
-          provider === "apple" &&
-          SAVOR_SAGE_AUTH_CONFIG.appleAuthEndpoint &&
-          SAVOR_SAGE_AUTH_CONFIG.appleClientId
-        ) {
-          const params = new URLSearchParams({
-            client_id: SAVOR_SAGE_AUTH_CONFIG.appleClientId,
-            redirect_uri: window.location.origin + "/dashboard.html",
-            response_type: "code",
-            scope: "name email",
-            response_mode: "form_post"
-          });
-          window.location.href = `${SAVOR_SAGE_AUTH_CONFIG.appleAuthEndpoint}?${params.toString()}`;
-          return;
-        }
-
-        if (socialStatus) {
-          socialStatus.textContent =
-            provider === "google"
-              ? "Google Sign-In is not configured yet. Configure Google OAuth 2.0 (googleClientId & googleAuthEndpoint) and a backend callback to enable it."
-              : "Apple Sign-In is not configured yet. Configure Apple Services ID (appleClientId, Team/Key IDs & appleAuthEndpoint) and a backend callback to enable it.";
-        }
-      });
-    });
-    // Dark / Light theme toggle
-const themeToggle = document.getElementById("themeToggle");
-
-function applyTheme(theme) {
-  document.documentElement.setAttribute("data-theme", theme);
-  document.body.classList.toggle("light-theme", theme === "light");
-
-  themeToggle.innerHTML = theme === "light"
-    ? '<i class="fa-solid fa-moon"></i>'
-    : '<i class="fa-solid fa-sun"></i>';
-
-  themeToggle.title = theme === "light"
-    ? "Switch to dark theme"
-    : "Switch to light theme";
-
-  localStorage.setItem("culinary-theme", theme);
-}
-
-applyTheme(localStorage.getItem("culinary-theme") || "dark");
-
-themeToggle.addEventListener("click", () => {
-  const isLight = document.body.classList.contains("light-theme");
-  applyTheme(isLight ? "dark" : "light");
-});
-
-
-// LTR / RTL direction toggle
-const directionToggle = document.getElementById("directionToggle");
-
-function applyDirection(direction) {
-  document.documentElement.dir = direction;
-
-  directionToggle.title = direction === "ltr"
-    ? "Switch to RTL"
-    : "Switch to LTR";
-
-  localStorage.setItem("culinary-direction", direction);
-}
-
-applyDirection(
-  localStorage.getItem("culinary-direction") || "ltr"
-);
-
-directionToggle.addEventListener("click", () => {
-  const currentDirection = document.documentElement.dir || "ltr";
-  applyDirection(currentDirection === "ltr" ? "rtl" : "ltr");
-});
   </script>
 </body>
 </html>

@@ -167,15 +167,21 @@
   transform: translateX(-50%);
   width: min(1280px, 90%);
   min-height: 65px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
-  justify-content: space-between;
   gap: 18px;
   border-top: 1px solid rgba(255,255,255,.24);
   color: #f0e7da;
   font-size: 10px;
   letter-spacing: 2px;
+  line-height: 1.4;
 }
+
+/* Left / centre / right - middle item sits exactly in the centre */
+.classes-hero-bottom span:nth-child(1) { justify-self: start;  text-align: start; }
+.classes-hero-bottom span:nth-child(2) { justify-self: center; text-align: center; }
+.classes-hero-bottom span:nth-child(3) { justify-self: end;    text-align: end; }
 
 .classes-scroll {
   position: absolute;
@@ -658,11 +664,15 @@ html[data-theme="light"] .classes-page .skill-item:hover .skill-icon {
     right: 6%;
     width: auto;
     transform: none;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 10px;
     padding: 16px 0;
     font-size: 9px;
     letter-spacing: 1px;
+  }
+
+  .classes-hero-bottom span:nth-child(n) {
+    justify-self: center;
+    text-align: center;
   }
 
   .classes-scroll {

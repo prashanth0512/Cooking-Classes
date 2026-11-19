@@ -283,6 +283,31 @@ html[data-theme="light"] {
   background: var(--nav-line);
 }
 
+/* Home 1 / Home 2 dropdown items - roomy spacing (desktop + hamburger menu) */
+:root[data-theme] .site-header .dropdown-menu {
+  min-width: 230px;
+  padding: 10px;
+}
+
+:root[data-theme] .site-header .main-nav .dropdown-menu .nav-link {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 46px;
+  padding: 12px 16px;
+  border-radius: 9px;
+}
+
+:root[data-theme] .site-header .main-nav .dropdown-menu .nav-link + .nav-link {
+  margin-top: 6px;
+}
+
+:root[data-theme] .site-header .main-nav .dropdown-menu .nav-link::after {
+  display: none;
+}
+
 /* ---------- 4. GLOBAL BUTTON SYSTEM ---------- */
 
 /* 4a. Shared geometry, typography and transitions */
@@ -574,6 +599,10 @@ html[data-theme="light"] {
 
   :root[data-theme] .site-header .main-nav .nav-link::after {
     display: none;
+  }
+
+  :root[data-theme] .site-header .main-nav .dropdown-menu {
+    margin: 6px 0 10px;
   }
 }
 

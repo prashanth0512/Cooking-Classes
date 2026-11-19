@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore premium cooking classes, chef-led culinary experiences and weekend workshops at Savor & Sage Cooking Studio.">
+  <title>Home 2 | Savor & Sage Cooking Studio</title>
+
+   <link rel="icon" type="image/png" href="Images/logos2.png">
+   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="home2.css">
+  <link rel="stylesheet" href="shared.css">
+  <script src="theme-init.js"></script>
+</head>
+<body>
+
+<!-- SAME HEADER AS HOME 1 -->
+<header class="site-header">
+  <div class="header-container">
+
+    <a href="index.html" class="brand" aria-label="Savor and Sage home">
+     <span class="brand-icon">
+    <img src="Images/logos2.png" alt="Savor and Sage Logo" class="brand-logo">
+</span>
+      <span class="brand-text">
+        <strong>Savor <span>&</span> Sage</strong>
+        <small>COOKING STUDIO</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <div class="nav-dropdown">
+        <button class="nav-link dropdown-toggle current-page" id="homeDropdown" aria-expanded="false">
+          Home <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-menu">
+         <a href="index.html" class="nav-link">Home 1 <span>Classic</span></a>
+         <a href="home2.html" class="current-page nav-link active">Home 2 <span>Premium</span></a>
+        </div>
+      </div>
+
+      <a href="about.html" class="nav-link">About</a>
+      <a href="classes.html" class="nav-link">Classes</a>
+      <a href="Services.html" class="nav-link">Services</a>
+      <a href="weekendwork.html" class="nav-link">Weekend Workshops</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+<a href="dashboard.html" class="nav-link">Dashboard</a>
+</nav>
+
+    <div class="header-actions">
+      <button class="utility-btn" id="themeToggle" title="Switch theme" aria-label="Switch dark and light mode">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+
+      <button class="utility-btn direction-btn" id="directionToggle" title="Switch text direction" aria-label="Switch LTR and RTL">
+        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+      </button>
+
+      <a href="studentloginpage.html" class="login-btn">
+  <i class="fa-regular fa-user"></i>
+  <span>Student Login</span>
+</a>
+    </div>
+
+  </div>
+</header>
+
+<main class="premium-home">
+
+  <!-- SECTION 1: EDITORIAL HERO (distinct from Home 1) -->
+  <section class="h2hero" aria-labelledby="h2heroTitle">
+
+    <div class="h2hero-rail" aria-hidden="true">SAVOR &amp; SAGE &nbsp;·&nbsp; COOKING STUDIO</div>
+
+    <div class="h2hero-inner">
+
+      <div class="h2hero-copy">
+        <p class="h2hero-eyebrow"><span></span> SAVOR &amp; SAGE CULINARY EXPERIENCES</p>
+
+        <h1 id="h2heroTitle">
+          <span class="h2hero-line">Where Passion</span>
+          <span class="h2hero-line h2hero-line-indent">Meets the</span>
+          <span class="h2hero-line"><em>Art of Cooking.</em></span>
+        </h1>
+
+        <p class="h2hero-lede">
+          Discover exceptional flavours, learn from experienced chefs,
+          and transform everyday ingredients into extraordinary creations.
+        </p>
+
+        <div class="h2hero-actions">
+          <a href="#classes" class="premium-button">
+            Explore Classes <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#about" class="premium-outline-button">
+            Discover Our Studio
+          </a>
+        </div>
+      </div>
+
+      <div class="h2hero-visual">
+        <figure class="h2hero-photo">
+          <img
+            src="Images/about2.jfif"
+            alt="Premium cooking studio and culinary preparation"
+            fetchpriority="high">
+        </figure>
+        <figure class="h2hero-inset">
+          <img
+            src="Images/hero2.jfif"
+            alt="Guests cooking together in the studio kitchen"
+            loading="lazy">
+        </figure>
+      </div>
+
+    </div>
+
+    <div class="h2hero-footer">
+      <span class="h2hero-footer-mark"><i></i> LEARN · CREATE · SAVOUR</span>
+      <span class="h2hero-footer-note">HANDS-ON CLASSES · WEEKEND WORKSHOPS</span>
+    </div>
+
+  </section>
+
+  <!-- SECTION 2: ABOUT + FEATURED CLASSES -->
+  <section class="premium-discover section-pad" id="about">
+    <div class="premium-intro">
+      <div class="premium-intro-image">
+        <img
+          src="Images/cook4.jpeg"
+          alt="Warm and welcoming culinary studio kitchen"
+          loading="lazy">
+        <div class="intro-image-caption">
+          <span>THE SAVOR & SAGE PHILOSOPHY</span>
+          <strong>Good food. Great memories.</strong>
+        </div>
+      </div>
+
+      <div class="premium-intro-copy">
+        <span class="premium-eyebrow"><span></span> A DIFFERENT KIND OF COOKING STUDIO</span>
+        <h2>Make room for<br><em>something delicious.</em></h2>
+        <p>
+          We believe cooking is an experience worth slowing down for.
+          Our studio brings people together to discover ingredients,
+          learn practical skills, and create food with confidence.
+        </p>
+        <p>
+          From essential techniques to global flavours, every class
+          is an opportunity to learn, experiment, and enjoy the process.
+        </p>
+        <a href="#classes" class="premium-text-link">
+          Find your cooking experience <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="premium-class-heading" id="classes">
+      <div>
+        <span class="premium-eyebrow"><span></span> EXPLORE OUR EXPERIENCES</span>
+        <h2>Find your <em>signature flavour.</em></h2>
+      </div>
+      <span class="class-heading-note">Discover something new in every class.</span>
+    </div>
+
+    <div class="premium-class-grid">
+      <article class="premium-class-card">
+        <div class="premium-class-image">
+          <img
+            src="Images/About7.jfif"
+            alt="Hands-on cooking and kitchen techniques"
+            loading="lazy">
+          <span class="premium-card-number">01</span>
+        </div>
+        <div class="premium-class-copy">
+          <span>BUILD YOUR FOUNDATION</span>
+          <h3>Cooking Essentials</h3>
+          <p>Master kitchen basics, ingredient preparation, and everyday cooking techniques.</p>
+          <a href="classes.html" class="premium-text-link">
+            Discover class <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="premium-class-card">
+        <div class="premium-class-image">
+          <img
+            src="Images/Homeimgg10.jfif"
+            alt="Beautifully prepared international cuisine"
+            loading="lazy">
+          <span class="premium-card-number">02</span>
+        </div>
+        <div class="premium-class-copy">
+          <span>TRAVEL THROUGH TASTE</span>
+          <h3>World Cuisines</h3>
+          <p>Explore inspiring dishes, exciting ingredients, and culinary traditions from around the world.</p>
+          <a href="classes.html" class="premium-text-link">
+            Discover class <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="premium-class-card">
+        <div class="premium-class-image">
+          <img
+            src="Images/homeingg9.jfif"
+            alt="Artisan desserts and beautiful baked treats"
+            loading="lazy">
+          <span class="premium-card-number">03</span>
+        </div>
+        <div class="premium-class-copy">
+          <span>CREATE SWEET MOMENTS</span>
+          <h3>Baking & Desserts</h3>
+          <p>Discover baking fundamentals, delicate desserts, and creative finishing techniques.</p>
+          <a href="classes.html" class="premium-text-link">
+            Discover class <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECTION 3: MEET OUR CHEFS -->
+  <section class="premium-chefs section-pad" id="chefs">
+    <div class="premium-section-heading">
+      <span class="premium-eyebrow"><span></span> THE PEOPLE BEHIND THE FLAVOUR</span>
+      <h2>Learn from those who<br><em>love what they do.</em></h2>
+      <p>
+        Great cooking starts with curiosity and grows with the right guidance.
+        Discover a welcoming space to learn, practise, and improve.
+      </p>
+    </div>
+
+    <div class="premium-chef-grid">
+      <article class="premium-chef-card">
+        <div class="premium-chef-image">
+          <img
+            src="Images/hero3.jfif"
+            alt="Professional chef in a culinary kitchen"
+            loading="lazy">
+          <span class="chef-speciality">CULINARY TECHNIQUES</span>
+        </div>
+        <div class="premium-chef-info">
+          <span>01 / FOUNDATIONS</span>
+          <h3>Master the Basics</h3>
+          <p>Build confidence with essential techniques and practical kitchen knowledge.</p>
+        </div>
+      </article>
+
+      <article class="premium-chef-card">
+        <div class="premium-chef-image">
+          <img
+            src="Images/contact4.jfif"
+            alt="Chef preparing a culinary creation"
+            loading="lazy">
+          <span class="chef-speciality">GLOBAL CUISINES</span>
+        </div>
+        <div class="premium-chef-info">
+          <span>02 / EXPLORATION</span>
+          <h3>Discover New Flavours</h3>
+          <p>Explore global recipes and learn how ingredients bring dishes to life.</p>
+        </div>
+      </article>
+
+      <article class="premium-chef-card">
+        <div class="premium-chef-image">
+          <img
+            src="Images/homeimgg3.jfif"
+            alt="A modern professional cooking studio"
+            loading="lazy">
+          <span class="chef-speciality">CREATIVE COOKING</span>
+        </div>
+        <div class="premium-chef-info">
+          <span>03 / INSPIRATION</span>
+          <h3>Make It Your Own</h3>
+          <p>Experiment with new ideas and develop a cooking style that feels like you.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECTION 4: WEEKEND WORKSHOPS -->
+  <section class="premium-workshops section-pad" id="workshops">
+    <div class="premium-workshop-image">
+      <img
+        src="Images/about8.jpeg"
+        alt="A group sharing a hands-on culinary experience"
+        loading="lazy">
+    </div>
+
+    <div class="premium-workshop-content">
+      <span class="premium-eyebrow"><span></span> YOUR WEEKEND, REIMAGINED</span>
+      <h2>Good company.<br>Great food.<br><em>Unforgettable moments.</em></h2>
+      <p>
+        Take a break from the everyday. Learn something new,
+        discover exciting flavours, and share a memorable cooking
+        experience with fellow food lovers.
+      </p>
+
+     
+<div class="experience-points">
+  <div>
+    <i class="fa-solid fa-utensils"></i>
+    <span>Hands-on cooking sessions</span>
+  </div>
+
+  <div>
+    <i class="fa-solid fa-globe"></i>
+    <span>Discover new cuisines</span>
+  </div>
+
+  <div>
+    <i class="fa-solid fa-users"></i>
+    <span>A welcoming group experience</span>
+  </div>
+</div>
+
+  </section>
+
+  <!-- SECTION 5: GALLERY + BOOKING CTA -->
+  <section class="premium-gallery section-pad" id="gallery">
+    <div class="premium-gallery-heading">
+      <div>
+        <span class="premium-eyebrow"><span></span> MOMENTS MADE IN OUR KITCHEN</span>
+        <h2>A little taste of <em>what we do.</em></h2>
+      </div>
+      <p>Learn together. Create something wonderful. Take the inspiration home.</p>
+    </div>
+
+    <div class="premium-gallery-grid">
+      <figure class="gallery-tall">
+        <img
+          src="Images/About1.jfif"
+          alt="Bright culinary studio kitchen"
+          loading="lazy">
+        <figcaption>Our Cooking Studio</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="Images/about2.jfif"
+          alt="Fresh ingredients and a colourful meal"
+          loading="lazy">
+        <figcaption>Fresh Ingredients</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="Images/contact2.jfif"
+          alt="Beautifully presented food"
+          loading="lazy">
+        <figcaption>Creative Plating</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="Images/hero1.jfif"
+          alt="Artisan desserts and baking"
+          loading="lazy">
+        <figcaption>Baking & Desserts</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="Images/hero2.jfif"
+          alt="A delicious international dish"
+          loading="lazy">
+        <figcaption>Flavours of the World</figcaption>
+      </figure>
+    </div>
+
+    <div class="premium-booking-banner" id="contact">
+      <div>
+        <span class="premium-eyebrow"><span></span> YOUR NEXT EXPERIENCE AWAITS</span>
+        <h2>Ready to create something <em>delicious?</em></h2>
+        <p>Find your class and start your culinary journey with us.</p>
+      </div>
+      <a href="mailto:hello@savorandsage.example?subject=Cooking%20Class%20Enquiry" class="premium-button">
+        Enquire About Classes <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- SAME FOOTER AS HOME 1 -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="brand footer-logo">
+                   <span class="brand-icon">
+    <img src="Images/logos2.png" alt="Savor and Sage Logo" class="brand-logo">
+</span>
+          <span class="brand-text">
+            <strong>Savor <span>&</span> Sage</strong>
+            <small>COOKING STUDIO</small>
+          </span>
+        </a>
+
+        <p>
+          Discover the joy of cooking through hands-on classes,
+          inspiring culinary experiences, and a love for good food.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home </a>
+        <a href="weekendwork.html">Weekend Workshops</a>
+        <a href="about.html">About Us</a>
+        <a href="Services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Our Classes</h3>
+        <a href="#classes">Cooking Essentials</a>
+        <a href="#classes">World Cuisines</a>
+        <a href="#classes">Baking & Desserts</a>
+        <a href="#workshops">Weekend Workshops</a>
+        <a href="dashboard.html">My Bookings</a>
+      </div>
+
+      <div class="footer-column footer-contact-us">
+        <h3>Contact Us</h3>
+
+        <a href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Your Store Address, Your City</span>
+        </a>
+
+        <a href="tel:+910000000000">
+          <i class="fa-solid fa-phone"></i>
+          <span>+91 00000 00000</span>
+        </a>
+
+        <a href="mailto:hello@wineandcraft.com">
+          <i class="fa-regular fa-envelope"></i>
+          <span>hello@wineandcraft.com</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="footerYear"></span> Savor & Sage. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="index.js"></script>
+<script src="home2.js"></script>
+</body>
+</html>

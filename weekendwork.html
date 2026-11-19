@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore hands-on weekend cooking workshops at Savor & Sage Cooking Studio. Learn new recipes, discover global flavours and enjoy cooking together.">
+  <title>Weekend Workshops | Savor & Sage Cooking Studio</title>
+
+   <link rel="icon" type="image/png" href="Images/logos2.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="weekendwork.css">
+  <link rel="stylesheet" href="shared.css">
+  <script src="theme-init.js"></script>
+</head>
+
+<body class="workshops-page">
+
+<!-- SAME HOME 1 HEADER -->
+<header class="site-header">
+  <div class="header-container">
+
+    <a href="index.html" class="brand" aria-label="Savor and Sage home">
+     <span class="brand-icon">
+    <img src="Images/logos2.png" alt="Savor and Sage Logo" class="brand-logo">
+</span>
+      <span class="brand-text">
+        <strong>Savor <span>&</span> Sage</strong>
+        <small>COOKING STUDIO</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+
+      <div class="nav-dropdown">
+        <button class="nav-link dropdown-toggle" id="homeDropdown" aria-expanded="false">
+          Home <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-menu">
+          <a href="index.html">Home 1 <span>Classic</span></a>
+          <a href="home2.html">Home 2 <span>Premium</span></a>
+        </div>
+      </div>
+
+      <a href="about.html" class="nav-link">About</a>
+      <a href="classes.html" class="nav-link">Classes</a>
+      <a href="Services.html" class="nav-link">Services</a>
+      <a href="weekendwork.html" class="nav-link current-page" aria-current="page">Weekend Workshops</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+<a href="dashboard.html" class="nav-link">Dashboard</a>
+</nav>
+
+    <div class="header-actions">
+      <button class="utility-btn" id="themeToggle" title="Switch theme" aria-label="Switch dark and light mode">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+
+      <button class="utility-btn direction-btn" id="directionToggle" title="Switch text direction" aria-label="Switch LTR and RTL">
+        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+      </button>
+
+     <a href="studentloginpage.html" class="login-btn">
+  <i class="fa-regular fa-user"></i>
+  <span>Student Login</span>
+</a>
+    </div>
+
+  </div>
+</header>
+
+
+<main>
+  
+<div class="ws-container ws-hero-layout">
+
+  <!-- LEFT SIDE: TEXT -->
+  <div class="ws-hero-content">
+    <span class="ws-eyebrow">
+      <span class="ws-eyebrow-line"></span>
+      THE WEEKEND EDITION
+    </span>
+
+    <h1>
+      Good Food.<br>
+      Great Company.<br>
+      <em>Wonderful Weekends.</em>
+    </h1>
+
+    <p class="ws-hero-description">
+      Take a break from the everyday and step into our kitchen.
+      Discover new flavours, learn practical techniques and create
+      something delicious with people who love food as much as you do.
+    </p>
+
+    <div class="ws-hero-actions">
+      <a href="#workshop-list" class="ws-button ws-button-primary">
+        Explore Workshops <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <a href="#ws-experience" class="ws-text-link">
+        What to expect <i class="fa-solid fa-arrow-down"></i>
+      </a>
+    </div>
+
+    <div class="ws-hero-notes">
+      <div class="ws-hero-note">
+        <span class="ws-note-icon">
+          <i class="fa-regular fa-calendar"></i>
+        </span>
+        <span>
+          <strong>Weekend Sessions</strong>
+          <small>Made for your free time</small>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE: IMAGE -->
+  <div class="ws-hero-art">
+    <div class="ws-hero-image">
+      <img
+        src="Images/class3.jpg"
+        alt="Fresh ingredients and a cooking workshop"
+      >
+    </div>
+
+    <div class="ws-floating-label ws-floating-top">
+      <i class="fa-solid fa-leaf"></i>
+      Fresh ingredients
+    </div>
+
+    <div class="ws-floating-label ws-floating-bottom">
+      <i class="fa-solid fa-heart"></i>
+      Made together
+    </div>
+  </div>
+
+</div>
+
+<div class="ws-hero-bottom">
+  <span>MAKE YOUR WEEKEND DELICIOUS</span>
+  <span class="ws-bottom-line"></span>
+  <span>01 / 05</span>
+</div>
+</section>
+
+
+
+  <!-- SECTION 2: WORKSHOP CARDS -->
+  <section class="ws-section ws-workshops" id="workshop-list">
+    <div class="ws-container">
+      <div class="ws-section-heading">
+        <div>
+          <span class="ws-eyebrow">FIND YOUR FLAVOUR</span>
+          <h2>Weekends worth <em>tasting.</em></h2>
+        </div>
+        <p>
+          Whether you're just starting out or ready to try something new,
+          there's a place for you at our kitchen table.
+        </p>
+      </div>
+
+      <div class="ws-workshop-grid">
+
+        <article class="ws-workshop-card">
+          <div class="ws-card-number">01</div>
+          <div class="ws-card-icon"><i class="fa-solid fa-kitchen-set"></i></div>
+          <span class="ws-card-tag">FOR EVERYDAY COOKS</span>
+          <h3>The Art of Everyday Cooking</h3>
+          <p>
+            Build confidence with knife skills, flavour pairing, seasoning
+            and the simple techniques behind delicious everyday meals.
+          </p>
+          <div class="ws-card-meta">
+            <span><i class="fa-regular fa-clock"></i> Beginner friendly</span>
+            <span><i class="fa-solid fa-user-group"></i> Small groups</span>
+          </div>
+          <a href="studentloginpage.html" class="ws-card-link">
+            Reserve your place <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="ws-workshop-card ws-card-featured">
+          <div class="ws-card-number">02</div>
+          <div class="ws-card-icon"><i class="fa-solid fa-earth-americas"></i></div>
+          <span class="ws-card-tag">A WORLD OF FLAVOUR</span>
+          <h3>Flavours Without Borders</h3>
+          <p>
+            Explore inspiring dishes, aromatic spices and cooking traditions
+            from different corners of the world.
+          </p>
+          <div class="ws-card-meta">
+            <span><i class="fa-solid fa-globe"></i> Global recipes</span>
+            <span><i class="fa-solid fa-fire-burner"></i> Practical cooking</span>
+          </div>
+          <a href="studentloginpage.html" class="ws-card-link">
+            Reserve your place <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="ws-workshop-card">
+          <div class="ws-card-number">03</div>
+          <div class="ws-card-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+          <span class="ws-card-tag">SWEET CREATIONS</span>
+          <h3>The Joy of Baking</h3>
+          <p>
+            Discover the pleasure of mixing, shaping and baking treats while
+            learning the little details that make a big difference.
+          </p>
+          <div class="ws-card-meta">
+            <span><i class="fa-solid fa-wheat-awn"></i> Baking basics</span>
+            <span><i class="fa-solid fa-heart"></i> Fun for all</span>
+          </div>
+          <a href="studentloginpage.html" class="ws-card-link">
+            Reserve your place <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+
+      </div>
+
+      <div class="ws-note-strip">
+        <i class="fa-solid fa-circle-info"></i>
+        <p>
+          Workshop dates, availability and booking details can be confirmed
+          through the Student Login area.
+        </p>
+        <a href="studentloginpage.html">View booking options <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION 3: WHAT YOU WILL LEARN -->
+  <section class="ws-section ws-learning" id="ws-learning">
+    <div class="ws-container ws-learning-layout">
+      <div class="ws-learning-intro">
+        <span class="ws-eyebrow">MORE THAN A RECIPE</span>
+        <h2>Leave with skills.<br><em>Take home inspiration.</em></h2>
+        <p>
+          Our workshops are designed to help you learn by doing.
+          Ask questions, experiment with flavours and discover techniques
+          you can use long after the weekend ends.
+        </p>
+        <a href="classes.html" class="ws-button ws-button-outline">
+          Explore All Classes <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="ws-learning-list">
+        <article class="ws-learning-item">
+          <span class="ws-learning-icon"><i class="fa-solid fa-utensils"></i></span>
+          <div>
+            <h3>Practical Techniques</h3>
+            <p>Learn useful kitchen skills with step-by-step guidance.</p>
+          </div>
+          <span class="ws-learning-index">01</span>
+        </article>
+
+        <article class="ws-learning-item">
+          <span class="ws-learning-icon"><i class="fa-solid fa-carrot"></i></span>
+          <div>
+            <h3>Fresh Ingredients</h3>
+            <p>Understand ingredients, balance flavours and make thoughtful choices.</p>
+          </div>
+          <span class="ws-learning-index">02</span>
+        </article>
+
+        <article class="ws-learning-item">
+          <span class="ws-learning-icon"><i class="fa-solid fa-book-open"></i></span>
+          <div>
+            <h3>Recipes to Keep</h3>
+            <p>Build a collection of ideas to recreate in your own kitchen.</p>
+          </div>
+          <span class="ws-learning-index">03</span>
+        </article>
+
+        <article class="ws-learning-item">
+          <span class="ws-learning-icon"><i class="fa-solid fa-people-group"></i></span>
+          <div>
+            <h3>Memories to Share</h3>
+            <p>Enjoy the process of cooking and sharing food with others.</p>
+          </div>
+          <span class="ws-learning-index">04</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION 4: THE EXPERIENCE -->
+  <section class="ws-section ws-experience" id="ws-experience">
+    <div class="ws-container">
+      <div class="ws-centered-heading">
+        <span class="ws-eyebrow">YOUR TIME IN OUR KITCHEN</span>
+        <h2>Come curious.<br><em>Leave inspired.</em></h2>
+        <p>
+          A relaxed, welcoming space where trying something new is always
+          part of the fun.
+        </p>
+      </div>
+
+      <div class="ws-experience-grid">
+        <article class="ws-experience-card">
+          <span class="ws-experience-number">01 / CONNECT</span>
+          <div class="ws-experience-symbol">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <h3>Intimate Groups</h3>
+          <p>
+            Learn in a friendly setting that gives you room to participate,
+            ask questions and enjoy the experience.
+          </p>
+        </article>
+
+        <article class="ws-experience-card">
+          <span class="ws-experience-number">02 / CREATE</span>
+          <div class="ws-experience-symbol">
+            <i class="fa-solid fa-hands-bubbles"></i>
+          </div>
+          <h3>Guided Practice</h3>
+          <p>
+            Get involved at every stage, from preparing ingredients to
+            finishing and presenting your creations.
+          </p>
+        </article>
+
+        <article class="ws-experience-card">
+          <span class="ws-experience-number">03 / ENJOY</span>
+          <div class="ws-experience-symbol">
+            <i class="fa-solid fa-mug-hot"></i>
+          </div>
+          <h3>Time to Connect</h3>
+          <p>
+            Slow down, share ideas and enjoy the simple pleasure of bringing
+            people together through food.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION 5: FINAL CTA -->
+  <section class="ws-section ws-final-cta" id="ws-booking">
+    <div class="ws-container">
+      <div class="ws-cta-panel">
+        <div class="ws-cta-decoration ws-cta-decoration-one"></div>
+        <div class="ws-cta-decoration ws-cta-decoration-two"></div>
+
+        <div class="ws-cta-content">
+          <span class="ws-eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
+          <h2>Your next favourite<br><em>weekend awaits.</em></h2>
+          <p>
+            Bring your curiosity, appetite and love for trying something new.
+            We'll meet you in the kitchen.
+          </p>
+  <a href="studentloginpage.html" class="ws-button ws-button-light">
+    Find Your Workshop
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
+        </div>
+
+        <div class="ws-cta-side">
+          <span class="ws-cta-side-icon"><i class="fa-solid fa-spoon"></i></span>
+          <span class="ws-cta-side-label">SAVOR THE MOMENT</span>
+          <strong>Cook something<br>memorable.</strong>
+          <span class="ws-cta-side-line"></span>
+          <span class="ws-cta-side-small">SAVOR & SAGE COOKING STUDIO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- SAME HOME 1 FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="brand footer-logo">
+        <span class="brand-icon">
+    <img src="Images/logos2.png" alt="Savor and Sage Logo" class="brand-logo">
+</span>
+          <span class="brand-text">
+            <strong>Savor <span>&</span> Sage</strong>
+            <small>COOKING STUDIO</small>
+          </span>
+        </a>
+
+        <p>
+          Discover the joy of cooking through hands-on classes,
+          inspiring culinary experiences, and a love for good food.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home </a>
+        <a href="weekendwork.html">Weekend Workshops</a>
+        <a href="about.html">About Us</a>
+        <a href="Services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Our Classes</h3>
+        <a href="classes.html">Cooking Essentials</a>
+        <a href="classes.html">World Cuisines</a>
+        <a href="classes.html">Baking & Desserts</a>
+        <a href="weekendwork.html">Weekend Workshops</a>
+        <a href="dashboard.html">My Bookings</a>
+      </div>
+
+      <div class="footer-column footer-contact-us">
+        <h3>Contact Us</h3>
+
+        <a href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Your Store Address, Your City</span>
+        </a>
+
+        <a href="tel:+910000000000">
+          <i class="fa-solid fa-phone"></i>
+          <span>+91 00000 00000</span>
+        </a>
+
+        <a href="mailto:hello@wineandcraft.com">
+          <i class="fa-regular fa-envelope"></i>
+          <span>hello@wineandcraft.com</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="footerYear"></span> Savor & Sage. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<script src="index.js"></script>
+<script src="weekendwork.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore cooking classes, food photography, chef demonstrations and culinary creations at Savor & Sage Cooking Studio.">
+  <title>Gallery | Savor & Sage Cooking Studio</title>
+  
+  <link rel="icon" type="image/png" href="Images/logos2.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Keep your existing Home 1 styles -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="servicepage.css">
+  <link rel="stylesheet" href="shared.css">
+  <script src="theme-init.js"></script>
+</head>
+
+<body>
+
+<!-- SAME HOME 1 HEADER -->
+<header class="site-header">
+  <div class="header-container">
+
+    <a href="index.html" class="brand" aria-label="Savor and Sage home">
+             <span class="brand-icon">
+    <img src="Images/logos2.png" alt="Savor and Sage Logo" class="brand-logo">
+</span>
+      <span class="brand-text">
+        <strong>Savor <span>&</span> Sage</strong>
+        <small>COOKING STUDIO</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <div class="nav-dropdown">
+        <button class="nav-link dropdown-toggle" id="homeDropdown" aria-expanded="false">
+          Home <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-menu">
+          <a href="index.html">Home 1 <span>Classic</span></a>
+          <a href="home2.html">Home 2 <span>Premium</span></a>
+        </div>
+      </div>
+
+     <a href="about.html" class="nav-link">About</a>
+     <a href="classes.html" class="nav-link">Classes</a>
+    <a href="Services.html" class="nav-link current-page" aria-current="page">Services</a>
+     <a href="weekendwork.html" class="nav-link">Weekend Workshops</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+<a href="dashboard.html" class="nav-link">Dashboard</a>
+</nav>
+
+    <div class="header-actions">
+      <button class="utility-btn" id="themeToggle" title="Switch theme" aria-label="Switch dark and light mode">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+
+      <button class="utility-btn direction-btn" id="directionToggle" title="Switch text direction" aria-label="Switch LTR and RTL">
+        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+      </button>
+
+      <a href="studentloginpage.html" class="login-btn">
+  <i class="fa-regular fa-user"></i>
+  <span>Student Login</span>
+</a>
+    </div>
+
+  </div>
+</header>
+
+<main class="gallery-page">
+
+  <!-- SECTION 1: HERO -->
+  <section class="service-hero">
+    <div class="service-hero-content">
+      <span class="service-eyebrow">SAVOR & SAGE · COOKING STUDIO</span>
+      <h1>Discover the Art of <em>Beautiful Cooking.</em></h1>
+      <p>Learn new techniques, explore delicious flavours and turn your passion for food into unforgettable culinary experiences.</p>
+
+      <div class="service-actions">
+        <a href="#our-services" class="service-btn">Explore Our Services <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="servicedetail.html?service=cooking" class="service-text-link">Discover Cooking Classes</a>
+      </div>
+
+      <div class="service-stats">
+        <div><strong>01</strong><span>Learn</span></div>
+        <div><strong>02</strong><span>Create</span></div>
+        <div><strong>03</strong><span>Celebrate</span></div>
+      </div>
+    </div>
+
+    <div class="service-hero-visual">
+      <img src="Images/contact7.jfif" alt="Beautiful culinary creations">
+      <div class="service-image-note">
+        <i class="fa-solid fa-utensils"></i>
+        <span><strong>Made with passion</strong><small>Experiences worth sharing</small></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: OUR SERVICES -->
+  <section class="services-section" id="our-services">
+    <div class="services-heading">
+      <span class="service-eyebrow">WHAT WE OFFER</span>
+      <h2>Explore Our <em>Services</em></h2>
+      <p>From everyday cooking skills to creative baking, find an experience that inspires you.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-card-image">
+          <img src="Images/hero1.jfif" alt="Hands-on cooking class">
+          <span class="service-number">01</span>
+        </div>
+        <div class="service-card-content">
+          <span class="service-category">LEARN THE BASICS</span>
+          <h3>Cooking Classes</h3>
+          <p>Build kitchen confidence, master essential techniques and prepare delicious dishes.</p>
+         <a href="servicedetail.html?service=cooking" class="service-details-link">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-image">
+          <img src="Images/contact4.jfif" alt="Freshly baked artisan bread">
+          <span class="service-number">02</span>
+        </div>
+        <div class="service-card-content">
+          <span class="service-category">BAKE SOMETHING SPECIAL</span>
+          <h3>Baking Classes</h3>
+          <p>Discover baking methods, dessert preparation and the joy of creating sweet treats.</p>
+          <a href="servicedetail.html?service=baking" class="service-details-link">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-image">
+          <img src="Images/contact2.jfif" alt="People enjoying a cooking workshop">
+          <span class="service-number">03</span>
+        </div>
+        <div class="service-card-content">
+          <span class="service-category">LEARN TOGETHER</span>
+          <h3>Weekend Workshops</h3>
+          <p>Spend your weekend exploring new recipes and enjoying hands-on culinary activities.</p>
+          <a href="servicedetail.html?service=weekend" class="service-details-link">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-image">
+          <img src="Images/contact6.jfif" alt="Chef demonstrating food preparation">
+          <span class="service-number">04</span>
+        </div>
+        <div class="service-card-content">
+          <span class="service-category">INSPIRE YOUR CREATIVITY</span>
+          <h3>Chef Demonstrations</h3>
+          <p>Explore professional techniques and discover fresh ideas from guided demonstrations.</p>
+         <a href="servicedetail.html?service=chef-demo" class="service-details-link">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECTION 3: WHY CHOOSE US -->
+  <section class="service-benefits">
+    <div class="benefits-image">
+      <img src="Images/class3.jpg" alt="Carefully prepared food in a cooking class">
+      <div class="benefits-image-caption">
+        <i class="fa-solid fa-heart"></i>
+        <span>Every dish begins with inspiration.</span>
+      </div>
+    </div>
+
+    <div class="benefits-content">
+      <span class="service-eyebrow">THE SAVOR & SAGE EXPERIENCE</span>
+      <h2>More Than Cooking.<br><em>A Creative Experience.</em></h2>
+      <p>We bring people and food together through practical learning, creativity and a shared love of cooking.</p>
+
+      <div class="benefit-item">
+        <span><i class="fa-solid fa-kitchen-set"></i></span>
+        <div><h3>Hands-on Learning</h3><p>Build practical skills by preparing dishes yourself.</p></div>
+      </div>
+
+      <div class="benefit-item">
+        <span><i class="fa-solid fa-lightbulb"></i></span>
+        <div><h3>Creative Discovery</h3><p>Explore flavours, techniques and new culinary ideas.</p></div>
+      </div>
+
+      <div class="benefit-item">
+        <span><i class="fa-solid fa-people-group"></i></span>
+        <div><h3>A Welcoming Space</h3><p>Enjoy learning, sharing and creating with others.</p></div>
+      </div>
+
+     <a href="servicedetail.html?service=cooking" class="service-btn">Discover the Experience <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+
+
+  <!-- SECTION 5: CALL TO ACTION -->
+  <section class="service-cta">
+    <span class="service-eyebrow">YOUR CULINARY JOURNEY STARTS HERE</span>
+    <h2>Ready to Create Something <em>Delicious?</em></h2>
+    <p>Choose an experience, discover new skills and bring your love of food to life.</p>
+    <div class="service-actions">
+     <a href="servicedetail.html?service=cooking" class="service-btn">Explore a Service <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="weekendwork.html" class="service-cta-secondary">View Weekend Workshops</a>
+    </div>
+  </section>
+
+</main>
+
+
+
+<!-- SAME HOME 1 FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="brand footer-logo">
+                   <span class="brand-icon">
+    <img src="Images/logos2.png" alt="Savor and Sage Logo" class="brand-logo">
+</span>
+          <span class="brand-text">
+            <strong>Savor <span>&</span> Sage</strong>
+            <small>COOKING STUDIO</small>
+          </span>
+        </a>
+
+        <p>
+          Discover the joy of cooking through hands-on classes,
+          inspiring culinary experiences, and a love for good food.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home </a>
+        <a href="weekendwork.html">Weekend Workshops</a>
+        <a href="about.html">About Us</a>
+        <a href="Services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Our Classes</h3>
+        <a href="classes.html">Cooking Essentials</a>
+        <a href="classes.html">World Cuisines</a>
+        <a href="classes.html">Baking & Desserts</a>
+        <a href="weekendwork.html">Weekend Workshops</a>
+        <a href="dashboard.html">My Bookings</a>
+      </div>
+
+      <div class="footer-column footer-contact-us">
+        <h3>Contact Us</h3>
+        <a href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Your Store Address, Your City</span>
+        </a>
+        <a href="tel:+910000000000">
+          <i class="fa-solid fa-phone"></i>
+          <span>+91 00000 00000</span>
+        </a>
+        <a href="mailto:hello@wineandcraft.com">
+          <i class="fa-regular fa-envelope"></i>
+          <span>hello@wineandcraft.com</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="footerYear"></span> Savor & Sage. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<script src="index.js"></script>
+
+
+<script src="servicepage.js"></script>
+</body>
+</html>
+

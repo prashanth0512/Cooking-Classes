@@ -1,0 +1,2063 @@
+/* =========================================
+   SAVOR & SAGE — WEEKEND WORKSHOPS
+   Content styles only; shared header/footer
+   remain controlled by index.css
+========================================= */
+
+.workshops-page {
+  --ws-green: var(--primary, #C98A24);
+  --ws-green-dark: var(--primary-dark, #9A6415);
+  --ws-gold: var(--accent, #E7B84B);
+  --ws-cream: #FBF6E9;
+  --ws-cream-deep: #F4EBD8;
+  --ws-ink: #3F3428;
+  --ws-muted: #B9B4A8;
+  --ws-line: rgba(201, 138, 36, 0.25);
+}
+
+.workshops-page main {
+  overflow: hidden;
+}
+
+.workshops-page main * {
+  box-sizing: border-box;
+}
+
+.ws-container {
+  width: min(1160px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.ws-section {
+  position: relative;
+  padding: 105px 0;
+}
+
+.ws-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--ws-gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  line-height: 1.5;
+}
+
+.ws-eyebrow-line {
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background: currentColor;
+}
+
+.ws-section h2,
+.ws-hero h1 {
+  margin: 18px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -1.3px;
+}
+
+.ws-section h2 {
+  font-size: clamp(35px, 4.2vw, 53px);
+  line-height: 1.15;
+}
+
+.ws-section h2 em,
+.ws-hero h1 em,
+.ws-cta-panel h2 em {
+  color: var(--ws-gold);
+  font-weight: 500;
+}
+
+.ws-section p {
+  line-height: 1.85;
+}
+
+.ws-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-height: 52px;
+  padding: 0 23px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  transition: transform 0.25s ease, background 0.25s ease,
+              color 0.25s ease, border-color 0.25s ease;
+}
+
+.ws-button:hover {
+  transform: translateY(-3px);
+}
+
+.ws-button-primary {
+  color: #fff;
+  background: var(--ws-green);
+}
+
+.ws-button-primary:hover {
+  background: var(--ws-green-dark);
+}
+
+.ws-button-outline {
+  color: var(--ws-green);
+  border-color: var(--ws-green);
+  background: transparent;
+}
+
+.ws-button-outline:hover {
+  color: #fff;
+  background: var(--ws-green);
+}
+
+.ws-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap 0.25s ease;
+}
+
+.ws-text-link:hover {
+  gap: 15px;
+}
+
+
+/* =========================================
+   SECTION 1 — HERO
+========================================= */
+
+.ws-hero {
+  position: relative;
+  min-height: 670px;
+  padding: 85px 0 70px;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 78% 35%, rgba(198, 154, 88, 0.13), transparent 32%),
+    radial-gradient(ellipse at 8% 90%, rgba(101, 118, 75, 0.13), transparent 35%);
+  color: var(--text, #fff);
+}
+
+.ws-hero::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 46%;
+  height: 100%;
+  border-left: 1px solid rgba(198, 154, 88, 0.13);
+  content: "";
+  pointer-events: none;
+}
+
+.ws-hero-layout {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.ws-hero-content {
+  position: relative;
+  z-index: 2;
+  animation: wsFadeUp 0.75s ease both;
+}
+
+.ws-hero h1 {
+  max-width: 670px;
+  margin: 24px 0 20px;
+  font-size: clamp(43px, 5.5vw, 72px);
+  line-height: 1.08;
+}
+
+.ws-hero h1 em {
+  display: inline-block;
+}
+
+.ws-hero-description {
+  max-width: 520px;
+  margin: 0;
+  color: var(--muted, #b9b4a8);
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.ws-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 31px;
+}
+
+.ws-hero-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 44px;
+  padding-top: 24px;
+  border-top: 1px solid var(--ws-line);
+}
+
+.ws-hero-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ws-note-icon {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(198, 154, 88, 0.4);
+  border-radius: 50%;
+  color: var(--ws-gold);
+  font-size: 15px;
+}
+
+.ws-hero-note strong,
+.ws-hero-note small {
+  display: block;
+}
+
+.ws-hero-note strong {
+  margin-bottom: 4px;
+  font-size: 11px;
+}
+
+.ws-hero-note small {
+  color: var(--muted, #b9b4a8);
+  font-size: 10px;
+}
+
+.ws-hero-art {
+  position: relative;
+  display: grid;
+  min-height: 480px;
+  place-items: center;
+  animation: wsFadeUp 0.9s 0.12s ease both;
+}
+
+.ws-art-ring {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border: 1px solid rgba(198, 154, 88, 0.3);
+  border-radius: 50%;
+}
+
+.ws-art-ring-one {
+  transform: rotate(-20deg) scaleX(0.78);
+}
+
+.ws-art-ring-two {
+  width: 325px;
+  height: 425px;
+  border-color: rgba(101, 118, 75, 0.4);
+  transform: rotate(34deg);
+}
+
+.ws-art-card {
+  position: relative;
+  z-index: 1;
+  width: min(330px, 82%);
+  padding: 22px;
+  border: 1px solid rgba(198, 154, 88, 0.35);
+  border-radius: 170px 170px 8px 8px;
+  background: linear-gradient(160deg, rgba(101, 118, 75, 0.18), rgba(198, 154, 88, 0.08));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
+}
+
+.ws-art-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 6px 17px;
+  color: var(--ws-gold);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.ws-art-topline i {
+  font-size: 17px;
+}
+
+.ws-art-plate {
+  display: grid;
+  aspect-ratio: 1;
+  padding: 17px;
+  place-items: center;
+  border: 1px solid rgba(198, 154, 88, 0.6);
+  border-radius: 50%;
+  background: #e7ddc9;
+  box-shadow: inset 0 0 0 8px #f5eddf, inset 0 0 0 9px rgba(70, 84, 55, 0.2);
+}
+
+.ws-plate-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(70, 84, 55, 0.2);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 48% 47%, #d5a45f 0 8%, transparent 9%),
+    radial-gradient(circle at 32% 35%, #71834e 0 10%, transparent 11%),
+    radial-gradient(circle at 65% 33%, #a94e38 0 9%, transparent 10%),
+    radial-gradient(circle at 68% 65%, #e1b56e 0 11%, transparent 12%),
+    radial-gradient(circle at 35% 68%, #9e4e3a 0 10%, transparent 11%),
+    radial-gradient(circle at center, #f4e9d3, #d8c6a7);
+}
+
+.ws-food-leaf {
+  position: absolute;
+  width: 48px;
+  height: 22px;
+  border-radius: 100% 0 100% 0;
+  background: #667b48;
+  box-shadow: inset -3px -2px 0 rgba(32, 57, 25, 0.15);
+}
+
+.leaf-one {
+  top: 24%;
+  left: 18%;
+  transform: rotate(20deg);
+}
+
+.leaf-two {
+  right: 13%;
+  bottom: 26%;
+  transform: rotate(195deg);
+}
+
+.leaf-three {
+  bottom: 17%;
+  left: 28%;
+  transform: rotate(65deg) scale(0.75);
+}
+
+.ws-food-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #b45a40;
+}
+
+.dot-one { top: 20%; right: 27%; }
+.dot-two { bottom: 21%; right: 31%; background: #d4a24f; }
+.dot-three { top: 44%; left: 16%; background: #d4a24f; }
+.dot-four { top: 58%; right: 17%; background: #b45a40; }
+
+.ws-food-center {
+  position: absolute;
+  top: 43%;
+  left: 43%;
+  width: 34px;
+  height: 34px;
+  border: 4px solid #f0d8a7;
+  border-radius: 50%;
+  background: #c28d49;
+  box-shadow: 0 0 0 5px rgba(101, 118, 75, 0.2);
+}
+
+.ws-art-caption {
+  padding: 18px 5px 8px;
+  text-align: center;
+}
+
+.ws-art-caption span,
+.ws-art-caption strong {
+  display: block;
+}
+
+.ws-art-caption span {
+  margin-bottom: 8px;
+  color: var(--ws-gold);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.ws-art-caption strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.ws-floating-label {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 15px;
+  border: 1px solid var(--ws-line);
+  border-radius: 4px;
+  background: var(--card, #1a1a1a);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.ws-floating-label i {
+  color: var(--ws-gold);
+}
+
+.ws-floating-top {
+  top: 17%;
+  right: -2%;
+}
+
+.ws-floating-bottom {
+  bottom: 14%;
+  left: -3%;
+}
+
+.ws-hero-bottom {
+  position: absolute;
+  right: 24px;
+  bottom: 22px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--muted, #b9b4a8);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+.ws-bottom-line {
+  width: 70px;
+  height: 1px;
+  background: var(--ws-gold);
+}
+
+
+/* =========================================
+   SECTION 2 — WORKSHOP CARDS
+========================================= */
+
+.ws-workshops {
+  background: var(--surface, #11110f);
+}
+
+.ws-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 44px;
+}
+
+.ws-section-heading h2 {
+  margin-bottom: 0;
+}
+
+.ws-section-heading > p {
+  max-width: 385px;
+  margin: 0 0 6px;
+  color: var(--muted, #b9b4a8);
+  font-size: 13px;
+}
+
+.ws-workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ws-workshop-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 395px;
+  padding: 29px 25px 25px;
+  overflow: hidden;
+  border: 1px solid var(--ws-line);
+  border-radius: 5px;
+  background: var(--card, #1a1a18);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ws-workshop-card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: var(--ws-green);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.ws-workshop-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(198, 154, 88, 0.6);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+.ws-workshop-card:hover::before {
+  transform: scaleX(1);
+}
+
+.ws-card-featured {
+  border-color: rgba(198, 154, 88, 0.45);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(198, 154, 88, 0.12), transparent 35%),
+    var(--card, #1a1a18);
+}
+
+.ws-card-number {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: var(--ws-gold);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 21px;
+  opacity: 0.75;
+}
+
+.ws-card-icon {
+  display: grid;
+  width: 55px;
+  height: 55px;
+  margin-bottom: 26px;
+  place-items: center;
+  border: 1px solid rgba(198, 154, 88, 0.4);
+  border-radius: 50%;
+  color: var(--ws-gold);
+  font-size: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.ws-workshop-card:hover .ws-card-icon {
+  color: #fff;
+  background: var(--ws-green);
+}
+
+.ws-card-tag {
+  color: var(--ws-green);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.ws-card-featured .ws-card-tag {
+  color: var(--ws-gold);
+}
+
+.ws-workshop-card h3 {
+  margin: 12px 0 10px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.ws-workshop-card > p {
+  margin: 0 0 22px;
+  color: var(--muted, #b9b4a8);
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+.ws-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+  padding: 16px 0;
+  border-top: 1px solid var(--ws-line);
+}
+
+.ws-card-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted, #b9b4a8);
+  font-size: 10px;
+}
+
+.ws-card-meta i {
+  color: var(--ws-gold);
+}
+
+.ws-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--ws-line);
+  color: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ws-card-link i {
+  color: var(--ws-gold);
+  transition: transform 0.25s ease;
+}
+
+.ws-card-link:hover i {
+  transform: translateX(5px);
+}
+
+.ws-note-strip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 27px;
+  padding: 17px 20px;
+  border: 1px solid var(--ws-line);
+  background: rgba(101, 118, 75, 0.07);
+}
+
+.ws-note-strip > i {
+  color: var(--ws-gold);
+  font-size: 17px;
+}
+
+.ws-note-strip p {
+  flex: 1;
+  margin: 0;
+  color: var(--muted, #b9b4a8);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.ws-note-strip a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ws-green);
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   SECTION 3 — WHAT YOU WILL LEARN
+========================================= */
+
+.ws-learning {
+  background: var(--bg, #191916);
+}
+
+.ws-learning-layout {
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  align-items: start;
+  gap: 90px;
+}
+
+.ws-learning-intro {
+  position: sticky;
+  top: 35px;
+}
+
+.ws-learning-intro h2 {
+  margin-bottom: 22px;
+}
+
+.ws-learning-intro > p {
+  max-width: 420px;
+  margin: 0 0 27px;
+  color: var(--muted, #b9b4a8);
+  font-size: 13px;
+}
+
+.ws-learning-list {
+  border-top: 1px solid var(--ws-line);
+}
+
+.ws-learning-item {
+  display: grid;
+  grid-template-columns: 54px 1fr 30px;
+  align-items: center;
+  gap: 18px;
+  padding: 23px 0;
+  border-bottom: 1px solid var(--ws-line);
+  transition: padding 0.25s ease;
+}
+
+.ws-learning-item:hover {
+  padding-inline-start: 7px;
+}
+
+.ws-learning-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(101, 118, 75, 0.15);
+  color: var(--ws-gold);
+  font-size: 17px;
+}
+
+.ws-learning-item h3 {
+  margin: 0 0 6px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.ws-learning-item p {
+  margin: 0;
+  color: var(--muted, #b9b4a8);
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.ws-learning-index {
+  align-self: start;
+  padding-top: 6px;
+  color: var(--ws-gold);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   SECTION 4 — THE EXPERIENCE
+========================================= */
+
+.ws-experience {
+  background: var(--surface, #11110f);
+}
+
+.ws-centered-heading {
+  max-width: 650px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.ws-centered-heading h2 {
+  margin-bottom: 17px;
+}
+
+.ws-centered-heading > p {
+  max-width: 490px;
+  margin: 0 auto;
+  color: var(--muted, #b9b4a8);
+  font-size: 13px;
+}
+
+.ws-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ws-experience-card {
+  position: relative;
+  min-height: 260px;
+  padding: 28px 25px;
+  overflow: hidden;
+  border: 1px solid var(--ws-line);
+  border-radius: 5px;
+  background: var(--card, #1a1a18);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.ws-experience-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(198, 154, 88, 0.65);
+}
+
+.ws-experience-number {
+  color: var(--ws-gold);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.ws-experience-symbol {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  margin: 25px 0 20px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(101, 118, 75, 0.14);
+  color: var(--ws-gold);
+  font-size: 21px;
+  transition: transform 0.3s ease;
+}
+
+.ws-experience-card:hover .ws-experience-symbol {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+.ws-experience-card h3 {
+  margin: 0 0 10px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.ws-experience-card p {
+  margin: 0;
+  color: var(--muted, #b9b4a8);
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+
+/* =========================================
+   SECTION 5 — FINAL CALL TO ACTION
+========================================= */
+
+.ws-final-cta {
+  padding-top: 20px;
+  padding-bottom: 105px;
+  background: var(--bg, #191916);
+}
+
+.ws-cta-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 45px;
+  min-height: 370px;
+  padding: 65px;
+  overflow: hidden;
+  border: 1px solid rgba(198, 154, 88, 0.4);
+  border-radius: 5px;
+  background:
+    radial-gradient(ellipse at 85% 10%, rgba(198, 154, 88, 0.2), transparent 35%),
+    linear-gradient(125deg, #37432d, #283022 70%, #343122);
+  color: #fff;
+}
+
+.ws-cta-content,
+.ws-cta-side {
+  position: relative;
+  z-index: 1;
+}
+
+.ws-cta-panel h2 {
+  margin: 17px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(36px, 4.3vw, 54px);
+  font-weight: 600;
+  line-height: 1.13;
+  letter-spacing: -1px;
+}
+
+.ws-cta-panel h2 em {
+  color: #e2bd7d;
+}
+
+.ws-cta-content > p {
+  max-width: 480px;
+  margin: 0 0 27px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.ws-button-light {
+  color: #2c3324;
+  background: #f2e8d5;
+}
+
+.ws-button-light:hover {
+  color: #fff;
+  background: #7f8d63;
+}
+
+.ws-cta-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 230px;
+  padding-left: 45px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ws-cta-side-icon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 22px;
+  place-items: center;
+  border: 1px solid rgba(226, 189, 125, 0.65);
+  border-radius: 50%;
+  color: #e2bd7d;
+  font-size: 21px;
+}
+
+.ws-cta-side-label {
+  margin-bottom: 11px;
+  color: #e2bd7d;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+.ws-cta-side strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.ws-cta-side-line {
+  width: 50px;
+  height: 1px;
+  margin: 21px 0 15px;
+  background: #e2bd7d;
+}
+
+.ws-cta-side-small {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.ws-cta-decoration {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgba(226, 189, 125, 0.16);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ws-cta-decoration-one {
+  right: -95px;
+  top: -115px;
+}
+
+.ws-cta-decoration-two {
+  right: -45px;
+  bottom: -180px;
+  width: 310px;
+  height: 310px;
+}
+
+
+/* =========================================
+   LIGHT THEME
+========================================= */
+
+html[data-theme="light"] .workshops-page .ws-hero {
+  color: #29291f;
+  background:
+    radial-gradient(ellipse at 78% 35%, rgba(198, 154, 88, 0.17), transparent 32%),
+    radial-gradient(ellipse at 8% 90%, rgba(101, 118, 75, 0.11), transparent 35%),
+    #fbf8f0;
+}
+
+html[data-theme="light"] .workshops-page .ws-hero-description,
+html[data-theme="light"] .workshops-page .ws-hero-note small {
+  color: #747467;
+}
+
+html[data-theme="light"] .workshops-page .ws-floating-label {
+  color: #29291f;
+  background: #fffdf7;
+}
+
+html[data-theme="light"] .workshops-page .ws-workshops,
+html[data-theme="light"] .workshops-page .ws-experience {
+  background: #f3eee3;
+}
+
+html[data-theme="light"] .workshops-page .ws-learning,
+html[data-theme="light"] .workshops-page .ws-final-cta {
+  background: #fbf8f0;
+}
+
+html[data-theme="light"] .workshops-page .ws-workshop-card,
+html[data-theme="light"] .workshops-page .ws-experience-card {
+  color: #29291f;
+  background-color: #fffdf7;
+}
+
+html[data-theme="light"] .workshops-page .ws-card-featured {
+  background:
+    radial-gradient(circle at 90% 10%, rgba(198, 154, 88, 0.13), transparent 35%),
+    #fffdf7;
+}
+
+html[data-theme="light"] .workshops-page .ws-learning-item h3,
+html[data-theme="light"] .workshops-page .ws-experience-card h3,
+html[data-theme="light"] .workshops-page .ws-workshop-card h3 {
+  color: #29291f;
+}
+
+html[data-theme="light"] .workshops-page .ws-learning-item p,
+html[data-theme="light"] .workshops-page .ws-experience-card p,
+html[data-theme="light"] .workshops-page .ws-workshop-card > p,
+html[data-theme="light"] .workshops-page .ws-card-meta span,
+html[data-theme="light"] .workshops-page .ws-note-strip p,
+html[data-theme="light"] .workshops-page .ws-section-heading > p,
+html[data-theme="light"] .workshops-page .ws-centered-heading > p,
+html[data-theme="light"] .workshops-page .ws-learning-intro > p {
+  color: #77766a;
+}
+
+html[data-theme="light"] .workshops-page .ws-card-link {
+  color: #29291f;
+}
+
+html[data-theme="light"] .workshops-page .ws-note-strip {
+  background: rgba(101, 118, 75, 0.07);
+}
+
+html[data-theme="light"] .workshops-page .ws-learning-icon,
+html[data-theme="light"] .workshops-page .ws-experience-symbol {
+  background: rgba(101, 118, 75, 0.12);
+}
+
+
+/* =========================================
+   RTL SUPPORT
+========================================= */
+
+html[dir="rtl"] .workshops-page .ws-hero-bottom {
+  direction: ltr;
+}
+
+html[dir="rtl"] .workshops-page .ws-floating-top {
+  right: auto;
+  left: -2%;
+}
+
+html[dir="rtl"] .workshops-page .ws-floating-bottom {
+  left: auto;
+  right: -3%;
+}
+
+html[dir="rtl"] .workshops-page .ws-learning-intro {
+  text-align: right;
+}
+
+html[dir="rtl"] .workshops-page .ws-cta-side {
+  padding-right: 45px;
+  padding-left: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 0;
+}
+
+html[dir="rtl"] .workshops-page .ws-learning-item,
+html[dir="rtl"] .workshops-page .ws-workshop-card,
+html[dir="rtl"] .workshops-page .ws-experience-card {
+  text-align: right;
+}
+
+html[dir="rtl"] .workshops-page .ws-card-number {
+  right: auto;
+  left: 20px;
+}
+
+html[dir="rtl"] .workshops-page .ws-card-link:hover i {
+  transform: translateX(-5px);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes wsFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .ws-hero {
+    padding-top: 70px;
+  }
+
+  .ws-hero-layout {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 25px;
+  }
+
+  .ws-hero h1 {
+    font-size: clamp(42px, 5.5vw, 59px);
+  }
+
+  .ws-hero-art {
+    min-height: 400px;
+  }
+
+  .ws-art-ring {
+    width: 300px;
+    height: 300px;
+  }
+
+  .ws-art-ring-two {
+    width: 270px;
+    height: 350px;
+  }
+
+  .ws-art-card {
+    width: min(290px, 88%);
+  }
+
+  .ws-floating-top {
+    right: -1%;
+  }
+
+  .ws-floating-bottom {
+    left: -1%;
+  }
+
+  .ws-learning-layout {
+    gap: 45px;
+  }
+
+  .ws-cta-panel {
+    padding: 45px;
+    gap: 30px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 720px) {
+  .ws-container {
+    width: min(100% - 34px, 540px);
+  }
+
+  .ws-section {
+    padding: 72px 0;
+  }
+
+  .ws-hero {
+    min-height: auto;
+    padding: 64px 0 70px;
+  }
+
+  .ws-hero::before {
+    display: none;
+  }
+
+  .ws-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .ws-hero h1 {
+    font-size: clamp(39px, 10vw, 57px);
+    letter-spacing: -0.8px;
+  }
+
+  .ws-hero-description {
+    font-size: 13px;
+  }
+
+  .ws-hero-actions {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .ws-hero-notes {
+    gap: 16px;
+    margin-top: 30px;
+  }
+
+  .ws-hero-note {
+    flex: 1 1 180px;
+  }
+
+  .ws-hero-art {
+    min-height: 405px;
+    margin-top: 8px;
+  }
+
+  .ws-art-card {
+    width: 280px;
+    max-width: 76%;
+  }
+
+  .ws-art-ring {
+    width: 300px;
+    height: 300px;
+  }
+
+  .ws-art-ring-two {
+    width: 260px;
+    height: 355px;
+  }
+
+  .ws-floating-top {
+    top: 13%;
+    right: 0;
+  }
+
+  .ws-floating-bottom {
+    bottom: 9%;
+    left: 0;
+  }
+
+  .ws-hero-bottom {
+    right: 17px;
+    bottom: 18px;
+    left: 17px;
+    font-size: 8px;
+  }
+
+  .ws-section-heading {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .ws-section-heading > p {
+    margin-top: 17px;
+  }
+
+  .ws-workshop-grid,
+  .ws-experience-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ws-workshop-card {
+    min-height: 0;
+    padding: 26px 22px 22px;
+  }
+
+  .ws-workshop-card > p {
+    margin-bottom: 20px;
+  }
+
+  .ws-note-strip {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 17px;
+  }
+
+  .ws-note-strip p {
+    flex: 1 1 calc(100% - 40px);
+  }
+
+  .ws-note-strip a {
+    margin-left: 31px;
+    white-space: normal;
+  }
+
+  .ws-learning-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .ws-learning-intro {
+    position: static;
+  }
+
+  .ws-learning-item {
+    grid-template-columns: 45px 1fr 25px;
+    gap: 12px;
+    padding: 19px 0;
+  }
+
+  .ws-learning-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 15px;
+  }
+
+  .ws-learning-item h3 {
+    font-size: 17px;
+  }
+
+  .ws-learning-item p {
+    font-size: 11px;
+  }
+
+  .ws-centered-heading {
+    margin-bottom: 32px;
+  }
+
+  .ws-experience-card {
+    min-height: 0;
+    padding: 25px 23px;
+  }
+
+  .ws-experience-symbol {
+    margin: 20px 0 17px;
+  }
+
+  .ws-final-cta {
+    padding-top: 5px;
+    padding-bottom: 72px;
+  }
+
+  .ws-cta-panel {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding: 35px 24px;
+  }
+
+  .ws-cta-panel h2 {
+    font-size: clamp(35px, 9vw, 47px);
+  }
+
+  .ws-cta-side {
+    min-height: auto;
+    padding: 27px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 0;
+  }
+
+  html[dir="rtl"] .workshops-page .ws-cta-side {
+    padding: 27px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 0;
+  }
+
+  html[dir="rtl"] .workshops-page .ws-learning-item,
+  html[dir="rtl"] .workshops-page .ws-workshop-card,
+  html[dir="rtl"] .workshops-page .ws-experience-card {
+    text-align: right;
+  }
+}
+
+@media (max-width: 390px) {
+  .ws-container {
+    width: calc(100% - 28px);
+  }
+
+  .ws-hero h1 {
+    font-size: 37px;
+  }
+
+  .ws-hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ws-hero-art {
+    min-height: 360px;
+  }
+
+  .ws-art-card {
+    width: 250px;
+  }
+
+  .ws-art-ring {
+    width: 260px;
+    height: 260px;
+  }
+
+  .ws-art-ring-two {
+    width: 230px;
+    height: 310px;
+  }
+
+  .ws-floating-label {
+    padding: 10px;
+    font-size: 9px;
+  }
+
+  .ws-learning-item {
+    grid-template-columns: 39px 1fr 20px;
+    gap: 10px;
+  }
+
+  .ws-learning-icon {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workshops-page .ws-hero-content,
+  .workshops-page .ws-hero-art {
+    animation: none;
+  }
+
+  .workshops-page .ws-button,
+  .workshops-page .ws-workshop-card,
+  .workshops-page .ws-experience-card,
+  .workshops-page .ws-learning-item,
+  .workshops-page .ws-experience-symbol {
+    transition: none;
+  }
+}
+/* =========================================
+   WORKSHOPS — NO GREEN, WARM GOLD THEME
+========================================= */
+
+.workshops-page {
+  --ws-green: #C98A24;
+  --ws-green-dark: #9A6415;
+  --ws-gold: #E7B84B;
+  --ws-cream: #FBF6E9;
+  --ws-cream-deep: #F4EBD8;
+  --ws-ink: #3F3428;
+  --ws-muted: #66594A;
+  --ws-line: rgba(201, 138, 36, 0.25);
+}
+
+/* Hero section — remove green glow */
+.workshops-page .ws-hero {
+  background:
+    radial-gradient(
+      ellipse at 78% 35%,
+      rgba(201, 138, 36, 0.15),
+      transparent 32%
+    ),
+    radial-gradient(
+      ellipse at 8% 90%,
+      rgba(154, 100, 21, 0.09),
+      transparent 35%
+    );
+}
+
+.workshops-page .ws-art-ring-two {
+  border-color: rgba(201, 138, 36, 0.35);
+}
+
+.workshops-page .ws-art-card {
+  background: linear-gradient(
+    160deg,
+    rgba(201, 138, 36, 0.16),
+    rgba(231, 184, 75, 0.08)
+  );
+}
+
+.workshops-page .ws-art-plate {
+  box-shadow:
+    inset 0 0 0 8px #f5eddf,
+    inset 0 0 0 9px rgba(201, 138, 36, 0.25);
+}
+
+/* Food illustration — no green */
+.workshops-page .ws-plate-inner {
+  border-color: rgba(201, 138, 36, 0.25);
+  background:
+    radial-gradient(circle at 48% 47%, #C98A24 0 8%, transparent 9%),
+    radial-gradient(circle at 32% 35%, #E7B84B 0 10%, transparent 11%),
+    radial-gradient(circle at 65% 33%, #A94E38 0 9%, transparent 10%),
+    radial-gradient(circle at 68% 65%, #E1B56E 0 11%, transparent 12%),
+    radial-gradient(circle at 35% 68%, #9E4E3A 0 10%, transparent 11%),
+    radial-gradient(circle at center, #FFFDF7, #F4EBD8);
+}
+
+.workshops-page .ws-food-leaf {
+  background: #C98A24;
+  box-shadow: inset -3px -2px 0 rgba(63, 52, 40, 0.15);
+}
+
+.workshops-page .ws-food-center {
+  box-shadow: 0 0 0 5px rgba(201, 138, 36, 0.2);
+}
+
+/* Cards and icons */
+.workshops-page .ws-note-strip {
+  background: rgba(201, 138, 36, 0.07);
+}
+
+.workshops-page .ws-learning-icon,
+.workshops-page .ws-experience-symbol {
+  background: rgba(201, 138, 36, 0.12);
+}
+
+/* Final CTA — replace green with dark brown */
+.workshops-page .ws-cta-panel {
+  background:
+    radial-gradient(
+      ellipse at 85% 10%,
+      rgba(201, 138, 36, 0.2),
+      transparent 35%
+    ),
+    linear-gradient(
+      125deg,
+      #3F3428,
+      #211A12 70%,
+      #17130E
+    );
+}
+
+.workshops-page .ws-button-light {
+  color: #3F3428;
+  background: #FBF6E9;
+}
+
+.workshops-page .ws-button-light:hover {
+  color: #fff;
+  background: #9A6415;
+}
+
+/* Body text — 15px */
+.workshops-page main p {
+  font-size: 15px;
+}
+
+/* Smooth hover effects */
+.workshops-page .ws-button,
+.workshops-page .ws-workshop-card,
+.workshops-page .ws-experience-card,
+.workshops-page .ws-card-icon,
+.workshops-page .ws-learning-item,
+.workshops-page .ws-experience-symbol {
+  transition: all 0.3s ease;
+}
+
+.workshops-page .ws-button:hover {
+  transform: translateY(-3px);
+}
+
+.workshops-page .ws-workshop-card:hover,
+.workshops-page .ws-experience-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201, 138, 36, 0.6);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Light theme — keep the same warm palette */
+html[data-theme="light"] .workshops-page .ws-hero {
+  background:
+    radial-gradient(
+      ellipse at 78% 35%,
+      rgba(201, 138, 36, 0.15),
+      transparent 32%
+    ),
+    #FBF8F0;
+}
+
+html[data-theme="light"] .workshops-page .ws-note-strip {
+  background: rgba(201, 138, 36, 0.07);
+}
+
+html[data-theme="light"] .workshops-page .ws-learning-icon,
+html[data-theme="light"] .workshops-page .ws-experience-symbol {
+  background: rgba(201, 138, 36, 0.12);
+}
+/* =========================================
+   WINE COLOR — CTA SECTION
+========================================= */
+
+.workshops-page {
+  --wine: #5E2335;
+  --wine-dark: #421725;
+}
+
+.workshops-page .ws-cta-panel {
+  background:
+    radial-gradient(
+      ellipse at 85% 10%,
+      rgba(201, 138, 36, 0.16),
+      transparent 35%
+    ),
+    linear-gradient(
+      125deg,
+      var(--wine),
+      var(--wine-dark) 70%,
+      #291019
+    );
+}
+
+.workshops-page .ws-button-light:hover {
+  background: var(--wine-dark);
+  color: #fff;
+}
+
+/* =========================================
+   CONNECT / CREATE / ENJOY — HOVER EFFECT
+========================================= */
+
+.workshops-page .ws-experience-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--ws-line);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.workshops-page .ws-experience-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--wine);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.workshops-page .ws-experience-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--wine);
+  box-shadow: 0 16px 35px rgba(94, 35, 53, 0.16);
+}
+
+.workshops-page .ws-experience-card:hover::before {
+  transform: scaleX(1);
+}
+
+.workshops-page .ws-experience-symbol {
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.workshops-page .ws-experience-card:hover .ws-experience-symbol {
+  background: var(--wine);
+  color: #fff;
+  transform: translateY(-3px) scale(1.06);
+}
+
+.workshops-page .ws-experience-number {
+  transition: color 0.3s ease;
+}
+
+.workshops-page .ws-experience-card:hover .ws-experience-number {
+  color: var(--wine);
+}
+
+/* Light theme hover shadow */
+html[data-theme="light"] .workshops-page .ws-experience-card:hover {
+  box-shadow: 0 16px 35px rgba(94, 35, 53, 0.12);
+}
+
+/* RTL compatibility */
+html[dir="rtl"] .workshops-page .ws-experience-card::before {
+  transform-origin: right;
+}
+/* STUDENT LOGIN POPUP */
+.login-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  background: rgba(15, 10, 12, 0.78);
+  backdrop-filter: blur(7px);
+}
+
+.login-overlay.show {
+  display: flex;
+}
+
+.login-card {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 34px;
+  border: 1px solid rgba(184, 115, 78, 0.35);
+  border-radius: 18px;
+  background: #FAF6F3;
+  color: #2B2023;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+  animation: studentLoginEnter 0.25s ease;
+}
+
+.close-login {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: #F0E5DF;
+  color: #5E2335;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.login-card .welcome-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 16px;
+  border-radius: 16px;
+  background: #5E2335;
+  color: #FFFFFF;
+  font-size: 23px;
+}
+
+.login-card .eyebrow,
+.login-card h2,
+.login-card .subtext {
+  text-align: center;
+}
+
+.login-card .eyebrow {
+  color: #B8734E;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.login-card h2 {
+  margin: 8px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+}
+
+.login-card .subtext {
+  margin: 0 0 22px;
+  color: #887A7C;
+  font-size: 14px;
+}
+
+.login-card label {
+  display: block;
+  margin: 14px 0 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-card input {
+  display: block;
+  width: 100%;
+  min-height: 45px;
+  padding: 12px 13px;
+  border: 1px solid #E4D6D0;
+  border-radius: 8px;
+  background: #FFFFFF;
+  color: #2B2023;
+  font: inherit;
+  outline: none;
+}
+
+.login-card input:focus {
+  border-color: #B8734E;
+  box-shadow: 0 0 0 3px rgba(184, 115, 78, 0.13);
+}
+
+.submit-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background: #5E2335;
+  color: #FFFFFF;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submit-login:hover {
+  background: #B8734E;
+}
+
+.back-to-site {
+  display: block;
+  margin-top: 20px;
+  color: #5E2335;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@keyframes studentLoginEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 22px;
+  }
+}
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-mark img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+.brand-icon {
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* =====================================
+   SAVOR & SAGE — REMOVE GREEN COLORS
+   Wine + Copper theme
+===================================== */
+
+.workshops-page {
+  --ws-green: #5E2335;
+  --ws-green-dark: #421725;
+  --ws-gold: #B8734E;
+  --ws-line: rgba(184, 115, 78, 0.25);
+}
+
+/* Section below Hero 1 */
+html[data-theme="dark"] .workshops-page .ws-workshops,
+html[data-theme="dark"] .workshops-page .ws-section {
+  background-color: #1C1116;
+}
+
+/* Remove green glow from hero */
+.workshops-page .ws-hero {
+  background:
+    radial-gradient(
+      ellipse at 78% 35%,
+      rgba(184, 115, 78, 0.12),
+      transparent 32%
+    ),
+    radial-gradient(
+      ellipse at 8% 90%,
+      rgba(94, 35, 53, 0.20),
+      transparent 35%
+    );
+}
+
+/* Green rings and card glow */
+.workshops-page .ws-art-ring-two {
+  border-color: rgba(184, 115, 78, 0.4);
+}
+
+.workshops-page .ws-art-card {
+  background: linear-gradient(
+    160deg,
+    rgba(94, 35, 53, 0.28),
+    rgba(184, 115, 78, 0.10)
+  );
+}
+
+.workshops-page .ws-food-center {
+  box-shadow: 0 0 0 5px rgba(184, 115, 78, 0.2);
+}
+
+/* Sections with green tint */
+.workshops-page .ws-note-strip {
+  background: rgba(94, 35, 53, 0.12);
+}
+
+.workshops-page .ws-learning-icon,
+.workshops-page .ws-experience-symbol {
+  background: rgba(94, 35, 53, 0.20);
+  color: #B8734E;
+}
+
+/* All primary buttons */
+.workshops-page .ws-button-primary {
+  background: #5E2335;
+  border-color: #5E2335;
+  color: #FFF8F5;
+}
+
+.workshops-page .ws-button-primary:hover {
+  background: #B8734E;
+  border-color: #B8734E;
+  color: #FFFFFF;
+}
+
+.workshops-page .ws-button-outline {
+  color: #B8734E;
+  border-color: #B8734E;
+}
+
+.workshops-page .ws-button-outline:hover {
+  background: #5E2335;
+  border-color: #5E2335;
+  color: #FFF8F5;
+}
+
+/* CTA section above/below the final CTA */
+.workshops-page .ws-cta-panel {
+  background:
+    radial-gradient(
+      ellipse at 85% 10%,
+      rgba(184, 115, 78, 0.16),
+      transparent 35%
+    ),
+    linear-gradient(
+      125deg,
+      #5E2335,
+      #421725 70%,
+      #1C1116
+    ) !important;
+}
+
+/* Light mode */
+html[data-theme="light"] .workshops-page .ws-workshops,
+html[data-theme="light"] .workshops-page .ws-section {
+  background-color: #FFF8F5;
+}
+
+html[data-theme="light"] .workshops-page .ws-note-strip {
+  background: rgba(94, 35, 53, 0.07);
+}
+
+html[data-theme="light"] .workshops-page .ws-learning-icon,
+html[data-theme="light"] .workshops-page .ws-experience-symbol {
+  background: rgba(94, 35, 53, 0.10);
+  color: #5E2335;
+}
+/* ALL CARDS — WINE & COPPER THEME (scoped to card containers only, never .ws-card-icon) */
+html[data-theme="dark"] .workshops-page .ws-workshop-card,
+html[data-theme="dark"] .workshops-page .ws-experience-card,
+html[data-theme="dark"] .workshops-page .ws-art-card {
+    background: #21151B;
+    border-color: rgba(184, 115, 78, 0.25);
+    box-shadow: none;
+}
+
+html[data-theme="dark"] .workshops-page .ws-workshop-card:hover,
+html[data-theme="dark"] .workshops-page .ws-experience-card:hover {
+    border-color: #B8734E;
+    box-shadow: 0 10px 28px rgba(94, 35, 53, 0.25);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* CARD ICONS — HIGH-CONTRAST LIGHT & DARK HOVER STATES */
+html[data-theme="dark"] .workshops-page .ws-card-icon,
+html[data-theme="dark"] .workshops-page .ws-learning-icon,
+html[data-theme="dark"] .workshops-page .ws-experience-symbol {
+    background-color: rgba(94, 35, 53, 0.35);
+    border-color: rgba(184, 115, 78, 0.45);
+    color: #E3B89F;
+}
+
+html[data-theme="dark"] .workshops-page .ws-workshop-card:is(:hover, :focus-within) .ws-card-icon,
+html[data-theme="dark"] .workshops-page .ws-card-icon:is(:hover, :focus-visible, :active),
+html[data-theme="dark"] .workshops-page .ws-learning-item:is(:hover, :focus-within) .ws-learning-icon,
+html[data-theme="dark"] .workshops-page .ws-experience-card:is(:hover, :focus-within) .ws-experience-symbol {
+    background-color: #5E2335;
+    border-color: #E3B89F;
+    color: #FFF8F5;
+}
+
+/* CARD TEXT */
+html[data-theme="dark"] .workshops-page .ws-workshop-card h3,
+html[data-theme="dark"] .workshops-page .ws-experience-card h3 {
+    color: #FFF8F5;
+}
+
+/* LIGHT MODE */
+html[data-theme="light"] .workshops-page .ws-workshop-card,
+html[data-theme="light"] .workshops-page .ws-experience-card {
+    background: #FFFFFF;
+    border-color: rgba(94, 35, 53, 0.18);
+}
+
+html[data-theme="light"] .workshops-page .ws-workshop-card:hover,
+html[data-theme="light"] .workshops-page .ws-experience-card:hover {
+    border-color: #B8734E;
+    box-shadow: 0 10px 25px rgba(94, 35, 53, 0.10);
+}
+
+/* Ensure FIND YOUR FLAVOUR & workshop icons stay crisp on Light Mode hover/focus/active */
+html[data-theme="light"] .workshops-page .ws-card-icon,
+html[data-theme="light"] .workshops-page .ws-learning-icon,
+html[data-theme="light"] .workshops-page .ws-experience-symbol {
+    background-color: rgba(94, 35, 53, 0.10);
+    border-color: rgba(94, 35, 53, 0.28);
+    color: #5E2335;
+}
+
+html[data-theme="light"] .workshops-page .ws-workshop-card:is(:hover, :focus-within) .ws-card-icon,
+html[data-theme="light"] .workshops-page .ws-card-icon:is(:hover, :focus-visible, :active),
+html[data-theme="light"] .workshops-page .ws-learning-item:is(:hover, :focus-within) .ws-learning-icon,
+html[data-theme="light"] .workshops-page .ws-experience-card:is(:hover, :focus-within) .ws-experience-symbol {
+    background-color: #5E2335;
+    border-color: #5E2335;
+    color: #FFF8F5;
+}
+
+html[data-theme="light"] .workshops-page .ws-card-icon i,
+html[data-theme="light"] .workshops-page .ws-learning-icon i,
+html[data-theme="light"] .workshops-page .ws-experience-symbol i {
+    color: inherit;
+}
+
+html[data-theme="light"] .workshops-page .ws-workshop-card .ws-card-meta i,
+html[data-theme="light"] .workshops-page .ws-workshop-card:hover .ws-card-meta i,
+html[data-theme="light"] .workshops-page .ws-workshop-card .ws-card-link i,
+html[data-theme="light"] .workshops-page .ws-workshop-card:hover .ws-card-link i,
+html[data-theme="light"] .workshops-page .ws-note-strip > i {
+    color: #5E2335;
+}
